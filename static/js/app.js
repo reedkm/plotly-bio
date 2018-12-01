@@ -59,6 +59,8 @@ function buildCharts(sample) {
 		
 		var layout = {
 			showlegend: false,
+			hovermode: "closest",
+			margin: {t:0},
 			xaxis: {title: "OTU ID"},
 			yaxis: {title: "Value"}
 		};
