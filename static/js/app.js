@@ -32,9 +32,9 @@ function buildCharts(sample) {
 
 	d3.json(url).then(function(response) {
 	
-		var otu_ids = response['otu_ids'];
-		var sample_values = response['sample_values'];
-		var otu_labels = response['otu_labels'];
+		var otu_ids = response["otu_ids"];
+		var sample_values = response["sample_values"];
+		var otu_labels = response["otu_labels"];
 		
 		var otu_ids_top10 = otu_ids.slice(0, 10);
 		var sample_values_top10 = sample_values.slice(0, 10);
@@ -50,9 +50,9 @@ function buildCharts(sample) {
 				color: otu_ids
 			},
 			text: otu_labels,
-			textinfo: 'none',
-			hoverinfo: 'x+y+text',
-			type: 'scatter'
+			textinfo: "none",
+			hoverinfo: "x+y+text",
+			type: "scatter"
 		};
 		
 		var data = [trace1];	
@@ -72,9 +72,9 @@ function buildCharts(sample) {
 			values: sample_values_top10,
 			labels: otu_ids_top10,
 			text: otu_labels_top10,
-			textinfo: 'percent',
-			hoverinfo: 'label+text+value+percent',
-			type: 'pie'
+			textinfo: "percent",
+			hoverinfo: "label+text+value+percent",
+			type: "pie"
 		};
 		
 		var topTen = [trace2];
